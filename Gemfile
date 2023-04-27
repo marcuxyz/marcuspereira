@@ -51,7 +51,7 @@ group :test do
   gem 'capybara'
   gem 'rubocop-rails', require: false
   gem 'selenium-webdriver'
-  gem 'webdrivers'
   gem 'shoulda', '~> 4.0'
   gem 'shoulda-matchers'
+  gem 'webdrivers'
 end
