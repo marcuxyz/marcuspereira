@@ -1,12 +1,18 @@
 require 'test_helper'
 
 class HomeTest < ActionDispatch::IntegrationTest
-  test 'should contains text in index' do
+  test 'should contains text' do
     get root_path
 
     assert_includes response.body, 'MARCUS'
     assert_includes response.body, 'PEREIRA'
     assert_includes response.body, 'O SENHOR é o meu pastor; nada me faltará. Salmos 23:1 NAA'
+  end
+
+  test 'should contains footer' do
+    get root_path
+
+    assert_includes response.body, 'Marcus Pereira; todos os direitos reservados.'
   end
 
   test 'should contains mural' do
