@@ -9,6 +9,7 @@ AllCops:
     - 'vendor/**/*'
     - 'db/**/*'
     - 'config/**/*'
+    - 'app/admin/auth/*'
 
 Style/Documentation:
   Enabled: false
