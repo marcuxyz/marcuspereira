@@ -1,0 +1,94 @@
+:root {
+  --bg-dark: #2d2d2d;
+  --bg-black-transparent: rgba(76, 175, 80, 0.3);
+  --bg-black: black;
+
+}
+
+html {
+  background-color: var(--bg-black);
+  color           : white;
+}
+
+
+.flex,
+.flex-between,
+.flex-end {
+  display        : flex;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.icons a {
+  background-image: none !important;
+  margin-right    : 25px;
+  color           : #ccc;
+
+}
+
+.icons a:hover {
+  color: white;
+}
+
+img {
+  border-color: #ccc;
+}
+
+.card {
+  border: none !important;
+}
+ 
+.card,
+.card-body,
+.card-title,
+.card-text {
+  background-color: var(--bg-dark);
+}
+
+#training {
+  background-color: var(--bg-black-transparent);
+}
+
+#training .card,
+#training .card-body,
+#training .card-title,
+#training .card-text {
+  background-color: var(--bg-black);
+}
+
+
+/* #training .card-body {
+  justify-content: center;
+  align-items: center;
+} */
+
+
+input {
+  color: white;
+}
+
+textarea {
+  color : white;
+  resize: none;
+}
+
+a.link {
+  color           : rgb(255, 214, 0) !important;
+  text-decoration : none !important;
+  background-image: none;
+  border-bottom   : 2px solid white;
+}
+
+a.border-none {
+  border-bottom   : none;
+}
+
+.text-featured {
+  color: rgb(255, 214, 0) !important;
+}
