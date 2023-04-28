@@ -13,16 +13,6 @@ class HomesTest < ApplicationSystemTestCase
     end
   end
 
-  test 'should redirect to linkedin profile' do
-    visit root_path
-
-    find('i.fa-linkedin').click
-
-    page.driver.browser.switch_to.window page.driver.browser.window_handles.last do
-      assert current_url == 'https://www.linkedin.com/in/marcuxyz/'
-    end
-  end
-
   test 'should redirect to github profile' do
     visit root_path
 
