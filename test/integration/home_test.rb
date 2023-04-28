@@ -5,7 +5,7 @@ class HomeTest < ActionDispatch::IntegrationTest
     get root_path
 
     assert response.body.include? 'MARCUS'
-    assert response.body.include? 'Pereira'
+    assert response.body.include? 'PEREIRA'
     assert response.body.include? 'O SENHOR é o meu pastor; nada me faltará. Salmos 23:1 NAA'
   end
 
