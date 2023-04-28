@@ -28,4 +28,10 @@ class HomeTest < ActionDispatch::IntegrationTest
     assert_includes response.body, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
     assert_includes response.body, '28 de abril, 2023.'
   end
+
+  test 'should no contains posts in mural' do
+    get root_path
+
+    assert_includes response.body, 'Nada publicado ainda!'
+  end
 end
