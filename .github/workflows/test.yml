@@ -1,4 +1,4 @@
-name: "Ruby on Rails integration and system tests"
+name: "Integration and system tests"
 on:
   push:
     branches: [ "main" ]
