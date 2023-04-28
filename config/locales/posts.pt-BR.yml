@@ -1,0 +1,16 @@
+pt-BR:
+  activerecord:
+    models:
+      post:
+        one: Conteúdo
+        other: Conteúdos
+    attributes:
+      post:
+        title: 'Título'
+        content: 'Contúdo'
+        position: 'Posição'
+        created_at: 'Data de criação'
+        updated_at: 'Data de atualização'
+  time:
+    formats:
+      calendar: "%d de %B, %Y."
