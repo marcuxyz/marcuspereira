@@ -43,6 +43,23 @@ class HomesTest < ApplicationSystemTestCase
     end
   end
 
+  test 'should be posts on correct position' do
+    create(:post)
+    travel_to Time.zone.local(2023, 1, 10, 11, 20, 30) do
+      create(:post)
+    end
+
+    visit root_path
+
+    posts = Post.all
+    within '#posts > div:nth-child(2)' do
+      assert page.has_content? posts.first.title
+    end
+    within '#posts > div:nth-child(3)' do
+      assert page.has_content? posts.last.title
+    end
+  end
+
   test 'should contains resources on posts' do
     create(:post, :with_resources)
 
