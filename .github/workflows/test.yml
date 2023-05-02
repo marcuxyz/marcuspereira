@@ -32,6 +32,8 @@ jobs:
           bundler-cache: true
       - name: Set up database schema
         run: bin/rails db:schema:load
+      - name: Run migration
+        run: bin/rails db:migrate
       - name: Run integration tests
         run: bin/rails test
       - name: Run system tests
