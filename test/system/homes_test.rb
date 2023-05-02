@@ -42,4 +42,14 @@ class HomesTest < ApplicationSystemTestCase
       assert current_url == 'https://www.youtube.com/playlist?list=PLxIrGEv-x-afU0SA3TIaLn4sAqtLqse06'
     end
   end
+
+  test 'should contains resources on posts' do
+    create(:post, :with_resources)
+
+    visit root_path
+
+    within '#posts' do
+      assert page.has_content? Resource.last.name
+    end
+  end
 end

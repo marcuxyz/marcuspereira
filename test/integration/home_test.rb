@@ -35,6 +35,14 @@ class HomeTest < ActionDispatch::IntegrationTest
     assert_includes response.body, '28 de abril, 2023.'
   end
 
+  test 'should contains resources on posts' do
+    create(:post, :with_resources)
+
+    get root_path
+
+    assert_includes response.body, Resource.last.name
+  end
+
   test 'should no contains posts in mural' do
     get root_path
 
