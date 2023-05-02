@@ -59,3 +59,5 @@ group :test do
   gem 'shoulda-matchers'
   gem 'webdrivers'
 end
+
+gem 'dockerfile-rails', '>= 1.2', group: :development
