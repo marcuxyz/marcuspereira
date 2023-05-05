@@ -1,12 +1,12 @@
 class CertificatesController < ApplicationController
   def new
-    @certificate = Participant.new
+    @participant = Participant.new
   end
 
   def create
-    @certificate = Participant.new(participant_params)
+    @participant = Participant.new(participant_params)
 
-    return render :new unless @certificate.save
+    return render :new unless @participant.save
 
     redirect_to new_certificate_path, notice: I18n.t('participants.redirect.messages.success')
   end

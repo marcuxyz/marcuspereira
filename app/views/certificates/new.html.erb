@@ -6,11 +6,11 @@
           <p class="text-center"> <%= msg %> </p>
         </div>
       <% end %>
-      <% if @certificate.errors.any? %>
+      <% if @participant.errors.any? %>
         <div class="alert alert-danger">
           <p class="text-danger">
             <ul>
-              <% @certificate.errors.full_messages.each do | message | %>
+              <% @participant.errors.full_messages.each do | message | %>
                 <li> <%= message %> </li>
               <% end %>
             </ul>
@@ -27,19 +27,23 @@
       <div class="card margin-top-large">
         <div class="card-body">
           <div class="card-text">
-            <form action="">
-              <div class="row">
-                <div class="col-12 col form-group">
-                  <input type="text" name="name" class="input-block" id="name" placeholder="Insira o nome completo">
+            <%= form_with model: @participant, url: certificates_path, local: true, data: { turbo: false } do | form | %>
+              <form action="">
+                <div class="row">
+                  <div class="col-12 col form-group">
+                    <%= form.label :name %>
+                    <%= form.text_field :name, class: 'input-block', placeholder: 'Insira o nome completo' %>
+                  </div>
+                  <div class="col-12 col form-group">
+                    <%= form.label :email %>
+                    <%= form.text_field :email, class: 'input-block', placeholder: 'Insira seu e-mail' %>
+                  </div>
+                  <div class="col-12 col form-group">
+                    <%= form.submit 'Emitir certificado', class: 'btn-primary btn-small btn-block' %>
+                  </div>
                 </div>
-                <div class="col-12 col form-group">
-                  <input type="email" name="email" class="input-block" id="" placeholder="Insira seu e-mail">
-                </div>
-                <div class="col-12 col form-group">
-                  <button class="btn-primary btn-small btn-block">Emitir certificado</button>
-                </div>
-              </div>
-            </form>
+              </form>
+            <% end %>
           </div>
         </div>
       </div>
