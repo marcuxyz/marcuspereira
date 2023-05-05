@@ -8,3 +8,8 @@ pt-BR:
       participant:
         name: 'Nome'
         email: 'E-mail'
+  participants:
+    redirect:
+      messages:
+        success: >-
+          Solicitação enviada com sucesso

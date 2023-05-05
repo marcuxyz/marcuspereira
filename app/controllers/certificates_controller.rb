@@ -8,7 +8,7 @@ class CertificatesController < ApplicationController
 
     return render :new unless @certificate.save
 
-    redirect_to new_certificate_path, notice: 'Solicitação enviada com sucesso'
+    redirect_to new_certificate_path, notice: I18n.t('participants.redirect.messages.success')
   end
 
   private
