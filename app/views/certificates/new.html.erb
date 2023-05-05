@@ -1,0 +1,38 @@
+<section class="section">
+  <div class="container">
+    <div class="col col-12">
+      <div>
+        <% flash.each do |_, msg| %>
+          <p> <%= msg %> </p>
+        <% end %>
+      </div>
+      <h2>Emitir certificado de participação</h2>
+      <p>
+        Preencha os campos abaixo para poder emitir seu certificado de partipação do treinamento <span
+          class="text-featured">Flask Masterclass</span>.</p>
+    </div>
+    
+
+    <div class="col col-12">
+      <div class="card margin-top-large">
+        <div class="card-body">
+          <div class="card-text">
+            <form action="">
+              <div class="row">
+                <div class="col-12 col form-group">
+                  <input type="text" name="name" class="input-block" id="name" placeholder="Insira o nome completo">
+                </div>
+                <div class="col-12 col form-group">
+                  <input type="email" name="email" class="input-block" id="" placeholder="Insira seu e-mail">
+                </div>
+                <div class="col-12 col form-group">
+                  <button class="btn-primary btn-small btn-block">Emitir certificado</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
