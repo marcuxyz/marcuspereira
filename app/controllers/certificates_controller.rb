@@ -1,9 +1,12 @@
 class CertificatesController < ApplicationController
-  def new; end
+  def new
+    @certificate = Participant.new
+  end
 
   def create
-    certificate = Participant.new(participant_params)
-    certificate.save!
+    @certificate = Participant.new(participant_params)
+
+    return render :new unless @certificate.save
 
     redirect_to new_certificate_path, notice: 'Solicitação enviada com sucesso'
   end

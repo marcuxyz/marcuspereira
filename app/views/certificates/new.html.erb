@@ -1,18 +1,28 @@
 <section class="section">
   <div class="container">
     <div class="col col-12">
-      <div>
-        <% flash.each do |_, msg| %>
-          <p> <%= msg %> </p>
-        <% end %>
-      </div>
+      <% flash.each do |_, msg| %>
+        <div class="alert alert-secondary">
+          <p class="text-center"> <%= msg %> </p>
+        </div>
+      <% end %>
+      <% if @certificate.errors.any? %>
+        <div class="alert alert-danger">
+          <p class="text-danger">
+            <ul>
+              <% @certificate.errors.full_messages.each do | message | %>
+                <li> <%= message %> </li>
+              <% end %>
+            </ul>
+          </p>
+        </div>
+      <% end %>
       <h2>Emitir certificado de participação</h2>
       <p>
         Preencha os campos abaixo para poder emitir seu certificado de partipação do treinamento <span
           class="text-featured">Flask Masterclass</span>.</p>
     </div>
     
-
     <div class="col col-12">
       <div class="card margin-top-large">
         <div class="card-body">
