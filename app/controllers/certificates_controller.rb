@@ -8,6 +8,8 @@ class CertificatesController < ApplicationController
 
     return render :new unless @participant.save
 
+    WelcomeJob.perform_now(@participat)
+
     redirect_to new_certificate_path, notice: I18n.t('participants.redirect.messages.success')
   end
 
