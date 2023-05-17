@@ -13,3 +13,7 @@ pt-BR:
       messages:
         success: >-
           Solicitação enviada com sucesso
+    email:
+      messages:
+        success: >-
+          Bem-vindo(a)! Sua solicitação foi recebida
